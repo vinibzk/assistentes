@@ -1,17 +1,20 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 
 __author__ = "Vinicius Mendes"
 __version__ = "0.0.1"
 
 import os
 import time
-from tabulate import tabulate
 from colorama import init, Fore, Style
+from tabulate import tabulate
 from NetScan import scan_network, get_ip_range  # Importa as funções de NetScan.py
+from site_utils import obter_informacoes_whois, obter_dominio_do_link, exibir_informacoes_whois  # Importa funções de site_utils.py
 
+# Inicializa o colorama para suportar cores no terminal
 init(autoreset=True)
 
 def clear_screen():
+    """Limpa a tela do terminal."""
     os.system("cls" if os.name == "nt" else "clear")
 
 def header():
@@ -34,8 +37,10 @@ def perguntar(nome):
             break
         elif "calcule" in resposta.lower() or "cálculo" in resposta.lower() or "calc" in resposta.lower() or "faça um cálculo" in resposta.lower():
             executar_calculo()
-        elif "varrer ip" in resposta.lower() or "scan ip" in resposta.lower() or "Listar ips" in resposta.lower():
+        elif "varrer ip" in resposta.lower() or "scan ip" in resposta.lower() or "listar ips" in resposta.lower():
             varrer_ip()
+        elif "whois" in resposta.lower() or "informações whois" in resposta.lower():
+            consultar_whois()
         else:
             clear_screen()
             print(f"{Fore.RED}[ GUIDEON ]{Style.RESET_ALL} Desculpe, não tenho informações sobre:\n'{resposta}'.")
@@ -69,10 +74,23 @@ def varrer_ip():
             ip_table.append([Fore.CYAN + ip_str, Fore.RED + status, Fore.MAGENTA + hostname])
 
     clear_screen()
-    print(f"{Fore.BLUE}[ GUIDEON ]{Style.RESET_ALL} Econtrei esses Dispositivos: ")
+    print(f"{Fore.BLUE}[ GUIDEON ]{Style.RESET_ALL} Encontrei esses Dispositivos: ")
     print()
     print(tabulate(ip_table, headers=[Fore.BLUE + "IP", Fore.BLUE + "STATUS", Fore.BLUE + "HOSTNAME"], tablefmt="grid"))
     print()
+    input(f"{Fore.BLUE}[ GUIDEON ]{Style.RESET_ALL} Pressione Enter para continuar...")
+
+def consultar_whois():
+    clear_screen()
+    link = input(f"{Fore.BLUE}[ GUIDEON ]{Style.RESET_ALL} Por favor, insira o link do site (exemplo: https://www.exemplo.com):\n{Fore.GREEN}>>>{Style.RESET_ALL} ")
+    dominio = obter_dominio_do_link(link)
+    
+    if dominio:
+        informacoes = obter_informacoes_whois(dominio)
+        if informacoes:
+            exibir_informacoes_whois(informacoes)
+        else:
+            print(f"{Fore.RED}[ GUIDEON ]{Style.RESET_ALL} Não foram encontradas informações para o domínio {dominio}.")
     input(f"{Fore.BLUE}[ GUIDEON ]{Style.RESET_ALL} Pressione Enter para continuar...")
 
 header()
