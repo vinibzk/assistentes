@@ -1,47 +1,84 @@
-# assistentes
-Repositório contendo o código e recursos para três assistentes virtuais: Karen, Guideon e Jarvis. Cada assistente tem sua própria pasta com arquivos e configurações.
+# Assistente Guideon
 
-Guideon
-Guideon é um assistente virtual desenvolvido em Python que oferece uma variedade de funcionalidades úteis através de um terminal interativo. Este assistente é capaz de realizar cálculos matemáticos, varrer redes para identificar dispositivos ativos e consultar informações WHOIS sobre domínios.
+**Guideon** é um assistente virtual desenvolvido em Python, projetado para oferecer uma variedade de funcionalidades úteis através de um terminal interativo. Com Guideon, você pode realizar cálculos matemáticos, varrer redes para identificar dispositivos ativos e consultar informações WHOIS sobre domínios.
 
-Funcionalidades
-Cálculos Matemáticos: Permite ao usuário inserir uma expressão matemática e retorna o resultado.
-Varredura de IPs: Identifica dispositivos ativos na rede local através da varredura de IPs.
-Consulta WHOIS: Obtém informações WHOIS para um domínio, fornecendo detalhes sobre o registro do site.
-Requisitos
-Certifique-se de ter o Python 3 instalado no seu sistema. Além disso, você precisará instalar as seguintes bibliotecas Python:
+## Visão Geral
 
-colorama
-tabulate
-Você pode instalar essas bibliotecas usando pip:
+Guideon combina uma interface interativa e colorida com diversas funcionalidades práticas, tornando o uso de comandos do terminal mais eficiente e intuitivo.
 
-bash
-Copiar código
-pip install colorama tabulate
-Como Usar
-Clone o repositório:
+## Funcionalidades
 
-bash
-Copiar código
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-cd NOME_DO_REPOSITORIO
-Execute o código:
+- **Cálculos Matemáticos**: Permite ao usuário inserir expressões matemáticas e obter o resultado diretamente no terminal.
+- **Varredura de IPs**: Identifica dispositivos ativos na rede local, apresentando uma lista com status e hostname.
+- **Consulta WHOIS**: Fornece informações WHOIS sobre um domínio, incluindo dados de registro e detalhes de contato.
 
-bash
-Copiar código
-python guideon.py
-Siga as instruções no terminal para interagir com o assistente Guideon. Você pode:
+## Requisitos
 
-Calcular Expressões: Digite uma expressão matemática quando solicitado.
-Varrer IPs: Forneça o IP da rede local para listar dispositivos ativos.
-Consultar WHOIS: Insira um link para obter informações WHOIS sobre o domínio.
-Estrutura do Código
-guideon.py: O script principal que contém a lógica do assistente Guideon.
-NetScan.py: Contém funções para escanear a rede e obter o intervalo de IPs.
-site_utils.py: Inclui funções para obter informações WHOIS e extrair o domínio do link.
-Contribuição
-Se você deseja contribuir para o projeto, sinta-se à vontade para enviar pull requests. Verifique o guia de contribuição para mais detalhes.
+Para executar o Guideon, você precisará dos seguintes componentes:
 
-Licença
-Este projeto está licenciado sob a MIT License.
+- **Python 3**: Certifique-se de ter o Python 3 instalado no seu sistema.
+- **Bibliotecas Python**: Instale as dependências necessárias usando `pip`:
 
+ ```bash
+  pip install colorama
+  pip install tabulate
+  pip install python-nmap
+  pip install whois
+  pip install tldextract
+  ```
+### 1. Clonar o Repositório
+Clone o repositório do Guideon para o seu ambiente local:
+```bash
+   git clone https://github.com/vinibzk/assistentes
+```
+### 2. Executar o Código
+Inicie o Guideon executando o script Python:
+```bash
+   python guideon.py
+```
+### 3. Interagir com o Assistente
+Após iniciar o Guideon, você poderá usar as seguintes funcionalidades:
+
+**Calcular Expressões:** Digite uma expressão matemática quando solicitado.
+Exemplo: `2 * 2 = 4`.
+
+**Varrer IPs:** Forneça o IP da rede local para listar dispositivos ativos. Exemplo: `192.168.1.254`.
+
+**Consultar WHOIS:** Insira um link para obter informações WHOIS sobre o domínio.
+Exemplo: `https://www.example.com`.
+
+# Estrutura do Código
+O projeto é composto pelos seguintes arquivos principais:
+
+`guideon.py`: O script principal que contém a lógica do assistente Guideon.
+`NetScan.py`: Módulo responsável por escanear a rede local e obter o intervalo de IPs para varredura.
+`site_utils.py`: Contém funções auxiliares para obter informações WHOIS e extrair o domínio de um link.
+
+# Exemplos
+Aqui estão alguns exemplos de uso do Guideon:
+### Cálculo Matemático
+```scss
+[ GUIDEON ] Qual é a expressão matemática?
+>>> 5 * (3 + 2)
+[ GUIDEON ] 5 * (3 + 2) = 25.
+```
+### Varredura de IPs
+```lua
+[ GUIDEON ] Insira o IP da rede local:
+>>> 192.168.1.254
+[ GUIDEON ] Encontrei esses Dispositivos:
++----------------+---------+----------------+
+| IP             | STATUS  | HOSTNAME       |
++----------------+---------+----------------+
+| 192.168.1.2    | Online  | device1.local  |
+| 192.168.1.3    | Offline |                |
++----------------+---------+----------------+
+```
+### Consulta WHOIS
+```yaml
+[ GUIDEON ] Por favor, insira o link do site:
+>>> https://www.example.com
+[ GUIDEON ] Informações WHOIS para example.com:
+Registrar: Example Registrar
+Data de Criação: 2020-01-01
+```
