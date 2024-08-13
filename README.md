@@ -1,4 +1,4 @@
-# Assistente Guideon
+# 🤖 Assistente Guideon
 
 **Guideon** é um assistente virtual desenvolvido em Python, projetado para oferecer uma variedade de funcionalidades úteis através de um terminal interativo. Com Guideon, você pode realizar cálculos matemáticos, varrer redes para identificar dispositivos ativos e consultar informações WHOIS sobre domínios.
 
@@ -6,13 +6,13 @@
 
 Guideon combina uma interface interativa e colorida com diversas funcionalidades práticas, tornando o uso de comandos do terminal mais eficiente e intuitivo.
 
-## Funcionalidades
+## ⚙️ Funcionalidades
 
 - **Cálculos Matemáticos**: Permite ao usuário inserir expressões matemáticas e obter o resultado diretamente no terminal.
 - **Varredura de IPs**: Identifica dispositivos ativos na rede local, apresentando uma lista com status e hostname.
 - **Consulta WHOIS**: Fornece informações WHOIS sobre um domínio, incluindo dados de registro e detalhes de contato.
 
-## Requisitos
+## 📕 Requisitos
 
 Para executar o Guideon, você precisará dos seguintes componentes:
 
@@ -54,15 +54,15 @@ O projeto é composto pelos seguintes arquivos principais:
 `NetScan.py`: Módulo responsável por escanear a rede local e obter o intervalo de IPs para varredura.
 `site_utils.py`: Contém funções auxiliares para obter informações WHOIS e extrair o domínio de um link.
 
-# Exemplos
+# 📘 Exemplos
 Aqui estão alguns exemplos de uso do Guideon:
-### Cálculo Matemático
+### 🧮 Cálculo Matemático
 ```scss
 [ GUIDEON ] Qual é a expressão matemática?
 >>> 5 * (3 + 2)
 [ GUIDEON ] 5 * (3 + 2) = 25.
 ```
-### Varredura de IPs
+### 🛜 Varredura de IPs
 ```lua
 [ GUIDEON ] Insira o IP da rede local:
 >>> 192.168.1.254
@@ -74,7 +74,7 @@ Aqui estão alguns exemplos de uso do Guideon:
 | 192.168.1.3    | Offline |                |
 +----------------+---------+----------------+
 ```
-### Consulta WHOIS
+### 🌐 Consulta WHOIS
 ```yaml
 [ GUIDEON ] Por favor, insira o link do site:
 >>> https://www.example.com
