@@ -230,7 +230,9 @@ def main():
             for resultado in resultados:
                 print(Fore.YELLOW + resultado)
             pausar_ate_comando("Os resultados foram exibidos. Diga 'fechar varredura de rede' para voltar ao menu principal.", voz_id, ["fechar varredura de rede"])
-
+        
+        elif "diga" in comando:
+            falar("Caua é o patinho do vinicius, perde sempre no fifa kkkkkk normal", voz_id)
         elif "comandos" in comando or "listar comandos" in comando or "mostrar comandos" in comando or "quais são os comandos" in comando or "ajuda" in comando:
             comandos = listar_comandos()
             falar("Aqui está a lista de comandos disponíveis.", voz_id)
