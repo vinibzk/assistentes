@@ -1,0 +1,227 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100vw; /* Garantir que o corpo use toda a largura da visualização */
+    overflow: hidden; /* Impede rolagem devido ao efeito de desfoque */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/fundo.jpg'); /* Caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(8px); /* Adiciona desfoque ao fundo */
+    z-index: -1; /* Garante que o fundo não sobreponha o conteúdo */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo com transparência */
+    z-index: -1; /* Garante que a sobreposição não sobreponha o conteúdo */
+}
+
+#main-panel {
+    display: flex;
+    width: 85vw; /* Ajusta a largura do painel principal */
+    height: 85vh; /* Ajusta a altura do painel principal */
+    max-width: 1200px; /* Define uma largura máxima para telas maiores */
+    max-height: 800px; /* Define uma altura máxima para telas maiores */
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    animation: panelGlow 2s infinite alternate;
+    overflow: hidden; /* Impede rolagem dentro do painel */
+}
+
+@keyframes panelGlow {
+    0% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+    }
+}
+
+#left-panel {
+    width: 25%; /* Aumenta a largura do painel esquerdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #00bcd4;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px 0 0 20px;
+    animation: avatarPulse 2s infinite alternate;
+}
+
+@keyframes avatarPulse {
+    0% {
+        transform: scale(1);
+        border: 2px solid #00bcd4;
+    }
+    100% {
+        transform: scale(1.05);
+        border: 2px solid #00e5ff;
+    }
+}
+
+#left-panel #avatar {
+    width: 80%;
+    border-radius: 50%;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#center-panel {
+    width: 75%; /* Ajusta a largura do painel central */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+#center-panel h1 {
+    font-size: 2.5em; /* Ajusta o tamanho do título */
+    color: #00bcd4;
+    margin: 0;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #00bcd4;
+    }
+    100% {
+        text-shadow: 0 0 20px #00e5ff;
+    }
+}
+
+#status {
+    color: #00bcd4;
+    font-size: 1.2em; /* Ajusta o tamanho do status */
+    margin-bottom: 20px;
+}
+
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid #00bcd4;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 15px rgba(0, 188, 212, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adiciona espaçamento entre mensagens */
+}
+
+.message {
+    max-width: 90%; /* Ajusta a largura máxima do balão de mensagem */
+    padding: 10px;
+    border-radius: 10px;
+    word-break: break-word; /* Garante quebra de palavras longas */
+    display: flex;
+    align-items: flex-start; /* Alinha o texto no topo do balão */
+    position: relative;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo transparente */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.user-message {
+    align-self: flex-end;
+    background: rgba(0, 188, 212, 0.9); /* Cor de fundo da mensagem do usuário */
+    color: #fff;
+    border: 1px solid #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+    max-width: 48ch; /* Define um limite de largura baseado no número de caracteres */
+}
+
+.assistant-message {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1); /* Cor de fundo da mensagem do assistente */
+    color: #e0e0e0;
+    border: 1px solid #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    max-width: 48ch; /* Define um limite de largura baseado no número de caracteres */
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #00bcd4;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #e0e0e0;
+    margin-right: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+#user-input:focus {
+    border-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+}
+
+#char-count {
+    color: #00bcd4;
+    font-size: 0.9em;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    min-width: 50px;
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: buttonPulse 1.5s infinite alternate;
+}
+
+@keyframes buttonPulse {
+    0% {
+        background: #00bcd4;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        background: #00e5ff;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    }
+}
+
+#send-button:hover {
+    background: #0097a7;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}

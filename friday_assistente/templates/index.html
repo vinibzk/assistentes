@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+</head>
+<body>
+    <div id="main-panel">
+        <div id="left-panel">
+            <img src="{{ url_for('static', filename='images/reator_stark.jpg') }}" alt="Reator Stark" id="avatar">
+        </div>
+        <div id="center-panel">
+            <h1>F.R.I.D.A.Y</h1>
+            <p id="status">Online</p>
+            <div id="chat-box">
+                <!-- Mensagens aparecerão aqui -->
+            </div>
+            <div id="input-container">
+                <input type="text" id="user-input" placeholder="Digite uma mensagem..." maxlength="200" autofocus>
+                <span id="char-count">200</span>
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

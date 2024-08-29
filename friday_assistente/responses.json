@@ -1,0 +1,138 @@
+{
+    "oi": [
+        "Olá! Como posso ajudar?",
+        "Oi! Tudo bem?",
+        "Olá! Em que posso ser útil?",
+        "Oi! O que posso fazer por você?",
+        "Olá! Como posso ajudar hoje?"
+    ],
+    "olá": [
+        "Olá! Como posso ajudar?",
+        "Oi! Tudo certo?",
+        "Olá! O que você precisa?",
+        "Oi! Como posso assisti-lo?",
+        "Olá! Estou à disposição."
+    ],
+    "tudo bem": [
+        "Sim, tudo ótimo! E com você?",
+        "Tudo bem, obrigado! E com você?",
+        "Sim, tudo tranquilo. Como posso ajudar?",
+        "Tudo bem, e você? Como posso ajudar?",
+        "Estou bem, obrigado! E você?"
+    ],
+    "voce pode me ajudar": [
+        "Claro, estou aqui para ajudar!",
+        "Sim, estou à disposição. O que você precisa?",
+        "Claro, em que posso ajudar?",
+        "Sim, o que você precisa?",
+        "Estou aqui para ajudar. Diga-me o que precisa."
+    ],
+    "bom dia": [
+        "Bom dia! Como posso ajudar você?",
+        "Bom dia! Em que posso ser útil?",
+        "Bom dia! O que você precisa?",
+        "Bom dia! Como posso assisti-lo hoje?",
+        "Bom dia! Estou aqui para ajudar."
+    ],
+    "boa tarde": [
+        "Boa tarde! Como posso ajudar?",
+        "Boa tarde! Estou à disposição.",
+        "Boa tarde! O que posso fazer por você?",
+        "Boa tarde! Em que posso ser útil?",
+        "Boa tarde! Como posso assisti-lo?"
+    ],
+    "boa noite": [
+        "Boa noite! Como posso ajudar você?",
+        "Boa noite! Estou aqui para ajudar.",
+        "Boa noite! O que você precisa?",
+        "Boa noite! Em que posso ser útil?",
+        "Boa noite! Diga-me como posso ajudar."
+    ],
+    "ajuda": [
+        "Claro, como posso ajudar você?",
+        "Sim, o que você precisa de ajuda?",
+        "Estou aqui para ajudar. O que você precisa?",
+        "Claro, em que posso ser útil?",
+        "Diga-me o que precisa e eu ajudarei."
+    ],
+    "oi, tudo bem": [
+        "Oi! Tudo bem, e com você?",
+        "Olá! Tudo ótimo, obrigado!",
+        "Oi! Estou bem, e você?",
+        "Olá! Tudo tranquilo por aqui, e com você?",
+        "Oi! Tudo certo. Como posso ajudar?"
+    ],
+    "como vai": [
+        "Vou bem, obrigado! E você?",
+        "Estou bem! Como posso ajudar?",
+        "Tudo certo por aqui. Como posso assisti-lo?",
+        "Vou bem! O que você precisa?",
+        "Estou ótimo! Em que posso ajudar?"
+    ],
+    "bom dia, assistente": [
+        "Bom dia! Como posso ajudar hoje?",
+        "Bom dia! Estou aqui para ajudar.",
+        "Bom dia! O que você precisa?",
+        "Bom dia! Em que posso ser útil?",
+        "Bom dia! Diga-me o que você precisa."
+    ],
+    "boa tarde, assistente": [
+        "Boa tarde! Como posso ajudar?",
+        "Boa tarde! Estou à disposição.",
+        "Boa tarde! O que posso fazer por você?",
+        "Boa tarde! Em que posso ser útil?",
+        "Boa tarde! Como posso assisti-lo?"
+    ],
+    "boa noite, assistente": [
+        "Boa noite! Como posso ajudar você?",
+        "Boa noite! Estou aqui para ajudar.",
+        "Boa noite! O que você precisa?",
+        "Boa noite! Em que posso ser útil?",
+        "Boa noite! Diga-me como posso ajudar."
+    ],
+    "oi, assistente": [
+        "Oi! Como posso ajudar?",
+        "Olá! O que posso fazer por você?",
+        "Oi! Estou aqui para ajudar.",
+        "Oi! Como posso assisti-lo?",
+        "Olá! Diga-me o que precisa."
+    ],
+    "olá, assistente": [
+        "Olá! Como posso ajudar?",
+        "Oi! Em que posso ser útil?",
+        "Olá! O que você precisa?",
+        "Oi! Estou aqui para ajudar.",
+        "Olá! Como posso assisti-lo?"
+    ],
+    "olá, tudo bem": [
+        "Olá! Tudo bem, e com você?",
+        "Oi! Tudo ótimo, obrigado!",
+        "Olá! Estou bem. E você?",
+        "Oi! Tudo tranquilo por aqui, e com você?",
+        "Olá! Tudo certo. Como posso ajudar?"
+    ],
+    "tudo bem, assistente": [
+        "Sim, tudo ótimo! E com você?",
+        "Tudo bem, obrigado! E com você?",
+        "Sim, tudo tranquilo. Como posso ajudar?",
+        "Tudo bem, e você? Como posso ajudar?",
+        "Estou bem, obrigado! E você?"
+    ],
+    "preciso de ajuda": [
+        "Claro, estou aqui para ajudar. O que você precisa?",
+        "Sim, em que posso ajudar?",
+        "Diga-me o que você precisa de ajuda.",
+        "Claro, como posso ajudar?",
+        "Estou à disposição. O que você precisa?"
+    ],
+    
+    "varredura de rede": [
+        "Vou iniciar a varredura da rede para você. Por favor, aguarde.",
+        "Deixe-me verificar a rede. Isso pode levar alguns minutos.",
+        "Vou escanear a rede agora. Um momento, por favor."
+    ],
+    "limpar terminal": [
+        "O chat será limpo!"
+    ]
+    
+}

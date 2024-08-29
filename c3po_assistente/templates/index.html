@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>C3PO - Assistente Virtual</title>
+</head>
+<body>
+    <div id="chat-container">
+        <header>
+            <div id="logo">
+                <img src="{{ url_for('static', filename='images/low.png') }}" alt="Logo do Chatbot">
+            </div>
+            <h1>C3PO</h1>
+        </header>
+        <div id="chatbox">
+            <div id="messages">
+                <!-- As mensagens serão inseridas aqui -->
+            </div>
+            <div id="user-input-container">
+                <input type="text" id="user_input" placeholder="Digite sua mensagem..." autocomplete="off">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
