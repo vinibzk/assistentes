@@ -1,11 +1,13 @@
 import whois
-import tldextract
 import datetime
-from colorama import Fore
+import tldextract
+from colorama import init, Back, Fore, Style
 from tabulate import tabulate
 
+init(autoreset=True)
+
 def formatar_data(data):
-    """Formata a data para uma representação mais legível."""
+    #Formata a data para uma representação mais legível."""
     if isinstance(data, list):
         return ', '.join([d.strftime("%d-%m-%Y") if isinstance(d, datetime.datetime) else 'N/A' for d in data])
     elif isinstance(data, datetime.datetime):
@@ -13,7 +15,7 @@ def formatar_data(data):
     return 'N/A'
 
 def exibir_informacoes_whois(informacoes):
-    """Exibe todas as informações WHOIS disponíveis de forma organizada e colorida."""
+    # Exibe todas as informações WHOIS disponíveis de forma organizada e colorida.
     print(f"\n{Fore.BLUE}Informações WHOIS para o domínio:{Fore.RESET}")
     info_table = []
     for campo, valor in informacoes.items():
@@ -36,7 +38,7 @@ def obter_informacoes_whois(dominio):
     return None
 
 def obter_dominio_do_link(link):
-    """Extrai o domínio de um link completo."""
+    # Extrai o domínio de um link completo.
     ext = tldextract.extract(link)
     if ext.domain and ext.suffix:
         dominio = f"{ext.domain}.{ext.suffix}"
