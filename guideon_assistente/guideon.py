@@ -2,8 +2,8 @@
 
 import os
 import time
-from colorama import init, Fore, Style
 from tabulate import tabulate
+from colorama import init, Back, Fore, Style
 from nmap import scan_network, get_ip_range
 from whois import obter_informacoes_whois, obter_dominio_do_link, exibir_informacoes_whois
 
@@ -27,9 +27,9 @@ def main():
     while True:
         command = prompt_bot()
         
-        if command.lower() in ["sair", "fechar", "desligar"]:
+        if command.lower() in ["sair", "fechar", "desligar", "exit", "off", "desligue", "durma", "sleep"]:
             break
-        elif command.lower() in ["escanear rede", "escanear wifi", "varrer wifi", "varrer rede"]:
+        elif command.lower() in ["escanear rede", "escanear wifi", "varrer wifi", "varrer rede", "scan wifi"]:
             varrer_ip()
         elif command.lower() in ["escanear site", "escanear url", "varrer url", "varrer site"]:
             calc()
