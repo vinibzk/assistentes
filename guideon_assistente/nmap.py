@@ -1,25 +1,23 @@
-import nmap
-import ipaddress
-import socket
 import os
+import nmap
+import socket
+import ipaddress
 from tabulate import tabulate
-from colorama import Fore, Style, init
+from colorama import init, Back, Fore, Style
 
-# Inicializa o colorama
 init(autoreset=True)
 
 def clear_screen():
-    """Limpa a tela do terminal."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_ip_range(local_ip):
-    """Calcula o intervalo de IP com base no IP local fornecido."""
+    #Calcula o intervalo de IP com base no IP local fornecido.
     ip = ipaddress.ip_address(local_ip)
     network = ipaddress.ip_network(ipaddress.ip_interface(f"{local_ip}/24").network, strict=False)
     return network
 
 def get_hostname(ip):
-    """Tenta resolver o hostname a partir do IP usando socket."""
+    #Tenta resolver o hostname a partir do IP usando socket.
     try:
         hostname, _, _ = socket.gethostbyaddr(ip)
         return hostname
