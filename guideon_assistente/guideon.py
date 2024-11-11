@@ -2,6 +2,8 @@
 
 import os
 import time
+import emoji
+import datetime
 from tabulate import tabulate
 from colorama import init, Back, Fore, Style
 from nmap import scan_network, get_ip_range
@@ -29,10 +31,10 @@ def main():
         
         if command.lower() in ["sair", "fechar", "desligar", "exit", "off", "desligue", "durma", "sleep"]:
             break
-        elif command.lower() in ["escanear rede", "escanear wifi", "varrer wifi", "varrer rede", "scan wifi"]:
+        elif command.lower() in ["escanear rede", "escanear wifi", "varrer wifi", "varrer rede", "scan wifi","nmap"]:
             varrer_ip()
-        elif command.lower() in ["escanear site", "escanear url", "varrer url", "varrer site"]:
-            calc()
+        elif command.lower() in ["escanear site", "escanear url", "varrer url", "varrer site", "scan site", "whois"]:
+            consultar_whois()
         else:
             command_error(command)
 
